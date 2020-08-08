@@ -5,6 +5,7 @@ COPY . .
 
 WORKDIR /app/client-hello-poisoning/custom-tls
 
+RUN mkdir -p ~/.cargo && cp /app/cargo_config ~/.cargo/config
 RUN cargo build
 RUN cargo install --path .
 
